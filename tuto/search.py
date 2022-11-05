@@ -1,6 +1,6 @@
 def readfile(filename):
-  with open(filename,'r') as f
-    return f.readLines()
+  with open(filename,'r') as f:
+    return f.readlines()
 
 def get_words ( line ):
     word_list = []
@@ -13,14 +13,14 @@ def get_words ( line ):
         word_list.append(word)
     return word_list
 
-def ceeate_index(filename):
+def create_index(filename):
  index={}
  lines= readfile(filename)
- for i,line in enumerate(lines)
-  for w in get_words(line)
-     index.setdefault(w)=[]
+ for i,line in enumerate(lines):
+  for w in get_words(line):
+     index.setdefault(w,[])
      index[w].append(i)
  return index
 
 print(get_words("The bana.na i;s :  yellow,"))
-print (creaye_index('test.txt'))
+print (create_index('test.txt'))
